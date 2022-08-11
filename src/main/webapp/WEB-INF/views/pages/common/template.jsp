@@ -27,7 +27,7 @@
 		<tiles:insertAttribute name="body" />
 	</div>
 	<tiles:insertAttribute name="footer" />
-	<script src="<c:url value="assets/js/jquery-3.6.0.min.js" />"></script>
-	<script src="<c:url value="assets/js/app.js" />"></script>
+	<script src="<c:url value="/assets/js/jquery-3.6.0.min.js" />"></script>
+	<script src="<c:url value="/assets/js/app.js" />"></script>
 </body>
 </html>
