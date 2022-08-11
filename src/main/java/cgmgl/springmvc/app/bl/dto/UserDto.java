@@ -8,12 +8,11 @@ import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Size;
 
 import cgmgl.springmvc.app.persistence.entity.User;
-import lombok.NoArgsConstructor;
+
 
 /**
  * Class UserDetailDto for user fetching and creating
  */
-@NoArgsConstructor
 public class UserDto {
 	
 	/** id. */

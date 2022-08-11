@@ -1,11 +1,8 @@
 package cgmgl.springmvc.app.common;
 
-import lombok.NoArgsConstructor;
-
 /**
  * Class Constant.
  */
-@NoArgsConstructor
 public final class Constant {
 
 	/**
