@@ -40,7 +40,8 @@
 		<property name="defaultEncoding" value="UTF-8" />
 	</bean>
 
-	<!-- HIBERNATE CONFIG -->
+
+	<!-- DATASOURCE CONFIG -->
 	<bean id="dataSource"
 		class="org.springframework.jdbc.datasource.DriverManagerDataSource">
 		<property name="driverClassName"
@@ -50,6 +51,20 @@
 		<property name="password" value="${jdbc.password}"></property>
 	</bean>
 
+	<!-- FLYWAY CONFIG -->
+	<bean id="flywayConfig"
+		class="org.flywaydb.core.api.configuration.ClassicConfiguration">
+		<property name="baselineOnMigrate" value="true" />
+		<property name="locations" value="classpath:db/migration" />
+		<property name="dataSource" ref="dataSource" />
+	</bean>
+
+	<bean id="flyway" class="org.flywaydb.core.Flyway"
+		init-method="migrate">
+		<constructor-arg ref="flywayConfig" />
+	</bean>
+
+	<!-- HIBERNATE CONFIG -->
 	<bean id="sessionFactory"
 		class="org.springframework.orm.hibernate5.LocalSessionFactoryBean">
 		<property name="dataSource" ref="dataSource" />
@@ -72,6 +87,7 @@
 		class="org.springframework.orm.hibernate5.HibernateTransactionManager">
 		<property name="sessionFactory" ref="sessionFactory" />
 	</bean>
+
 
 	<!-- MAIL CONFIG -->
 	<bean id="javaMailSender"

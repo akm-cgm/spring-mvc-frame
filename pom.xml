@@ -18,6 +18,7 @@
 		<javamail.api.version>1.5.5</javamail.api.version>
 		<javamail.version>1.4.7</javamail.version>
 		<apachetiles.version>3.0.8</apachetiles.version>
+		<flyway.version>9.1.2</flyway.version>
 		<slf4j.version>1.7.36</slf4j.version>
 		<maven-compiler-plugin.version>3.10.1</maven-compiler-plugin.version>
 		<maven-war-plugin.version>3.3.2</maven-war-plugin.version>
@@ -137,6 +138,7 @@
 			<version>${tomcat-dbcp.version}</version>
 		</dependency>
 
+
 		<!-- Validator -->
 		<dependency>
 			<groupId>javax.validation</groupId>
@@ -149,6 +151,19 @@
 			<groupId>mysql</groupId>
 			<artifactId>mysql-connector-java</artifactId>
 			<version>${mysql.connector.version}</version>
+		</dependency>
+
+		<!-- Flyway -->
+		<dependency>
+			<groupId>org.flywaydb</groupId>
+			<artifactId>flyway-core</artifactId>
+			<version>${flyway.version}</version>
+		</dependency>
+
+		<dependency>
+			<groupId>org.flywaydb</groupId>
+			<artifactId>flyway-mysql</artifactId>
+			<version>${flyway.version}</version>
 		</dependency>
 
 		<!-- Apache Tiles -->

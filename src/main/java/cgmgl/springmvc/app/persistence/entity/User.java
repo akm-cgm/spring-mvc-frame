@@ -50,11 +50,11 @@ public class User implements Serializable{
 	private String address;
 	
 	/** created at. */
-	@Column(name = "createdAt", updatable = false)
+	@Column(name = "created_at", updatable = false)
 	private Timestamp createdAt;
 	
 	/** updated at. */
-	@Column(name = "updatedAt")
+	@Column(name = "updated_at")
 	private Timestamp updatedAt;
 	
 	/** Auto Generate Getter Setter */
